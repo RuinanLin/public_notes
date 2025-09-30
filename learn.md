@@ -140,3 +140,12 @@ This is really***very***important text.
 			</head>
 
 3. Update the title to match the name of your website.
+
+---
+
+1. Open the file containing the Linux mascot.
+2. Marvel at its beauty.
+
+	![Tux, the Linux mascot](./tux.png)
+
+3. Close the file.
