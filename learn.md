@@ -53,21 +53,21 @@ This is really***very***important text.
 3. Third item
 4. Fourth item
 
-<!-- -->
+---
 
 1. First item
 1. Second item
 1. Third item
 1. Fourth item
 
-<!-- -->
+---
 
 1. First item
 8. Second item
 3. Third item
 5. Fourth item
 
-<!-- -->
+---
 
 1. First item
 2. Second item
@@ -76,28 +76,28 @@ This is really***very***important text.
 	2. Indented item
 4. Fourth item
 
-<!-- -->
+---
 
 - First item
 - Second item
 - Third item
 - Fourth item
 
-<!-- -->
+---
 
 * First item
 * Second item
 * Third item
 * Fourth item
 
-<!-- -->
+---
 
 + First item
 + Second item
 + Third item
 + Fourth item
 
-<!-- -->
+---
 
 - First item
 - Second item
@@ -106,12 +106,12 @@ This is really***very***important text.
 	- Indented item
 - Fourth item
 
-<!-- -->
+---
 
 - 1968\. A great year!
 - I think 1969 was second best.
 
-<!-- -->
+---
 
 * This is the first list item.
 * Here's the second list item.
