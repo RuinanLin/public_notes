@@ -176,3 +176,5 @@ In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, fill
 
 [link](https://www.example.com/my%20great%20page)  
 [a novel](https://en.wikipedia.org/wiki/The_Milagro_Beanfield_War_%28novel%29)
+
+![The San Juan Mountains are beautiful](./san-juan-mountains.jpg "San Juan Mountains")
