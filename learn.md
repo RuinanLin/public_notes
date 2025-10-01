@@ -153,3 +153,4 @@ This is really***very***important text.
 ---
 
 At the command prompt, type `nano`.
+``Use `code` in your Markdown file.``
