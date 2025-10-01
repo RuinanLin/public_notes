@@ -149,3 +149,7 @@ This is really***very***important text.
 	![Tux, the Linux mascot](./tux.png)
 
 3. Close the file.
+
+---
+
+At the command prompt, type `nano`.
