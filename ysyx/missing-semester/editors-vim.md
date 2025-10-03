@@ -4,9 +4,13 @@
 
 1. Complete `vimtutor`. Note: it looks best in a [80x24][1] (80 columns by 24 lines) terminal window.
 
+	[1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
+
 	已完成，略．<br><br>
 	
 2. Download our [basic vimrc][2] and save it to `~/.vimrc`. Read through the well-commented file (using Vim!), and observe how Vim looks and behaves slightly differently with the new config.
+
+	[2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
 
 	因为我已经有了一个`~/.vimrc`了，所以我会先逐行分析课件给出的文件是什么意思，再看看是否在我自己的`~/.vimrc`中采纳．
 
@@ -52,5 +56,3 @@
 
 		总是显示状态栏．laststatus默认的值是1，在这种情况下，状态栏只有在Ctrl+G的时候可以显示．当设置为2之后可以一直显示．
 
-[1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
-[2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
