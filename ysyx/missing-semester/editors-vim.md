@@ -48,5 +48,9 @@
 
 	当光标停留在第23行的时候，其他行呈现出来的行号就都是相对于23行的相对行号，这样就能非常方便地使用{count}k或者{count}j的方式来进行上下行的快速移动了．
 
+	- `set laststatus=2`
+
+	总是显示状态栏．laststatus默认的值是1，在这种情况下，状态栏只有在Ctrl+G的时候可以显示．当设置为2之后可以一直显示．
+
 [1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
 [2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
