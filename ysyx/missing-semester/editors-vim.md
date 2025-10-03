@@ -22,5 +22,11 @@
 
 		顺便提一句：如何显示在当前的Vim会话中，Vim已经加载了哪些规则？可以在Vim中运行`:scriptnames`即可．
 
+	- `set shortmess+=I`
+
+		shortmess这个选项能够控制Vim能显示什么信息，它的值是一系列单字母的flag，I就是flag之一，作用是隐藏启动介绍信息．Vim的启动介绍信息如下图所示：
+
+	![Vim's startup intro message](./vim-startup-intro-message.png "Vim's startup intro message")
+
 [1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
 [2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
