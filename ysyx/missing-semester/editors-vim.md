@@ -65,3 +65,11 @@
 	- `set hidden`
 
 		在默认情况下，如果你修改了一个buffer并且没有保存，Vim不允许你切换到别的buffer．虽然这可能可以提供一些保护，但是在有些情况下很麻烦．`set hidden`就可以避免掉这个设定．
+
+	- `set ignorecase` && `set smartcase`
+
+		`set ignorecase`就是在搜索的时候忽略大小写．`set smartcase`则是基于`set ignorecase`做了一些改进：如果搜索串是全小写，则在搜索的时候忽略大小写；如果在搜索串中出现了大写，则进行严格匹配，大小写敏感．
+
+	- `set incsearch`
+
+		在搜索的过程中就开始匹配．
