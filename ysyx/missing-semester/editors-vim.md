@@ -81,3 +81,11 @@
 		[3]: <https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping> "Introduction to different vim mapping commands"
 
 		然后来看原来的Q是什么东西，为什么要取消它的映射．原来的Q是一个Vi留下的很老的功能，叫Ex模式，非常麻烦．为了避免哪天误触到Q，我们需要把它映射成什么都不做．
+
+	- `set noerrorbells visualbell t_vb=`
+
+		当你有一些无效的键入时，默认情况下Vim可能会有一些音效或者视觉上的提示．有些人觉得这些很烦，所以把禁止Vim使用这些提示．
+
+	- `set mouse+=a`
+
+		使能鼠标的使用．a指的是所有的模式下．
