@@ -32,5 +32,21 @@
 
 	![Blank buffer after setting shortmess](./blank-buffer.png "Blank buffer after setting shortmess")
 
+	- `set number`
+
+	很简单，就是显示行号．
+
+	- `set relativenumber`
+
+	这个东西配合上面的`set number`一起用会非常好用．当仅仅设置了`set number`的时候，显示的行号是绝对行号：
+
+	![Line numbers shown when relativenumber is not set](./absolute-line-number.png "When relativenumber is not set")
+
+	而增设了`set relativenumber`之后，呈现的效果是这样的：
+
+	![Line numbers shown when relativenumber is set](./relative-line-number.png "When relativenumber is set")
+
+	当光标停留在第23行的时候，其他行呈现出来的行号就都是相对于23行的相对行号，这样就能非常方便地使用{count}k或者{count}j的方式来进行上下行的快速移动了．
+
 [1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
 [2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
