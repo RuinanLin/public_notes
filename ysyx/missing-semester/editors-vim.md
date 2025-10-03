@@ -24,9 +24,13 @@
 
 	- `set shortmess+=I`
 
-		shortmess这个选项能够控制Vim能显示什么信息，它的值是一系列单字母的flag，I就是flag之一，作用是隐藏启动介绍信息．Vim的启动介绍信息如下图所示：
+		shortmess这个选项能够控制Vim能显示什么信息，它的值是一系列单字母的flag，I就是flag之一，作用是隐藏启动介绍信息．当Vim启动时没有给出文件的时候，Vim会给出启动介绍信息，如下图所示：
 
 	![Vim's startup intro message](./vim-startup-intro-message.png "Vim's startup intro message")
+
+	而当加入了`set shortmess+=I`这行设置之后，当不给文件就启动Vim时，Vim只会给出一片空白，即空的buffer的界面：
+
+	![Blank buffer after setting shortmess](./blank-buffer.png "Blank buffer after setting shortmess")
 
 [1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
 [2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
