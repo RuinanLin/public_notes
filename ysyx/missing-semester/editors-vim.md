@@ -26,31 +26,31 @@
 
 		shortmess这个选项能够控制Vim能显示什么信息，它的值是一系列单字母的flag，I就是flag之一，作用是隐藏启动介绍信息．当Vim启动时没有给出文件的时候，Vim会给出启动介绍信息，如下图所示：
 
-	![Vim's startup intro message](./vim-startup-intro-message.png "Vim's startup intro message")
+		![Vim's startup intro message](./vim-startup-intro-message.png "Vim's startup intro message")
 
-	而当加入了`set shortmess+=I`这行设置之后，当不给文件就启动Vim时，Vim只会给出一片空白，即空的buffer的界面：
+		而当加入了`set shortmess+=I`这行设置之后，当不给文件就启动Vim时，Vim只会给出一片空白，即空的buffer的界面：
 
-	![Blank buffer after setting shortmess](./blank-buffer.png "Blank buffer after setting shortmess")
+		![Blank buffer after setting shortmess](./blank-buffer.png "Blank buffer after setting shortmess")
 
 	- `set number`
 
-	很简单，就是显示行号．
+		很简单，就是显示行号．
 
 	- `set relativenumber`
 
-	这个东西配合上面的`set number`一起用会非常好用．当仅仅设置了`set number`的时候，显示的行号是绝对行号：
+		这个东西配合上面的`set number`一起用会非常好用．当仅仅设置了`set number`的时候，显示的行号是绝对行号：
 
-	![Line numbers shown when relativenumber is not set](./absolute-line-number.png "When relativenumber is not set")
+		![Line numbers shown when relativenumber is not set](./absolute-line-number.png "When relativenumber is not set")
 
-	而增设了`set relativenumber`之后，呈现的效果是这样的：
+		而增设了`set relativenumber`之后，呈现的效果是这样的：
 
-	![Line numbers shown when relativenumber is set](./relative-line-number.png "When relativenumber is set")
+		![Line numbers shown when relativenumber is set](./relative-line-number.png "When relativenumber is set")
 
-	当光标停留在第23行的时候，其他行呈现出来的行号就都是相对于23行的相对行号，这样就能非常方便地使用{count}k或者{count}j的方式来进行上下行的快速移动了．
+		当光标停留在第23行的时候，其他行呈现出来的行号就都是相对于23行的相对行号，这样就能非常方便地使用{count}k或者{count}j的方式来进行上下行的快速移动了．
 
 	- `set laststatus=2`
 
-	总是显示状态栏．laststatus默认的值是1，在这种情况下，状态栏只有在Ctrl+G的时候可以显示．当设置为2之后可以一直显示．
+		总是显示状态栏．laststatus默认的值是1，在这种情况下，状态栏只有在Ctrl+G的时候可以显示．当设置为2之后可以一直显示．
 
 [1]: <https://en.wikipedia.org/wiki/VT100> "VT100"
 [2]: <https://missing.csail.mit.edu/2020/files/vimrc> "basic vimrc file"
