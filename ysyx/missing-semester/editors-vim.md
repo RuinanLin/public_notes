@@ -92,4 +92,20 @@
 
 	- `nnoremap <Left> :echoe "Use h"<CR>`
 
-		将使用箭头键移动映射成一种报错，从而改掉使用箭头键来移动的坏习惯．`:echoe`是指报错输出．<CR>的作用相当于回车，如果没有它，报错之后你要自己敲回车．
+		将使用箭头键移动映射成一种报错，从而改掉使用箭头键来移动的坏习惯．`:echoe`是指报错输出．<CR>的作用相当于回车，如果没有它，报错之后你要自己敲回车．<br><br>
+
+3. Install and configure a plugin: [ctrlp.vim][4].
+
+	[4]: <https://github.com/ctrlpvim/ctrlp.vim> "ctrlp.vim"
+
+	1. Create the plugins directory with `mkdir -p ~/.vim/pack/vendor/start`
+
+	2. Download the plugin: `cd ~/.vim/pack/vendor/start; git clone https://github.com/ctrlpvim/ctrlp.vim`
+
+	3. Read the [documentation][5] for the plugin. Try using CtrlP to locate a file by navigating to a project directory, opening Vim, and using the Vim command-line to start `:CtrlP`.
+
+		[5]: <https://github.com/ctrlpvim/ctrlp.vim/blob/master/readme.md> "ctrlp documentation"
+
+	4. Customize CtrlP by adding [configuration][6] to your `~/.vimrc` to open CtrlP by pressing Ctrl-P.
+
+	第1~2步都是比较简单的，但我觉得需要理解为什么Vim可以找到`~/.vim/pack/*/start`中的配置，以及`start`文件夹下的配置具体是什么作用，什么时候生效．
