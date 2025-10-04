@@ -108,4 +108,6 @@
 
 	4. Customize CtrlP by adding [configuration][6] to your `~/.vimrc` to open CtrlP by pressing Ctrl-P.
 
+		[6]: <https://github.com/ctrlpvim/ctrlp.vim/blob/master/readme.md#basic-options> "ctrlp configuration added to ~/.vimrc"
+
 	第1~2步都是比较简单的，但我觉得需要理解为什么Vim可以找到`~/.vim/pack/*/start`中的配置，以及`start`文件夹下的配置具体是什么作用，什么时候生效．
