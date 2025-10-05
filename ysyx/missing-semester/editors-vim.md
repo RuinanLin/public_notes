@@ -110,4 +110,20 @@
 
 		[6]: <https://github.com/ctrlpvim/ctrlp.vim/blob/master/readme.md#basic-options> "ctrlp configuration added to ~/.vimrc"
 
-	第1~2步都是比较简单的，但我觉得需要理解为什么Vim可以找到`~/.vim/pack/*/start`中的配置，以及`start`文件夹下的配置具体是什么作用，什么时候生效．
+	第1~2步都是比较简单的，略．接下来对CtrlP这个插件进行一下简要的总结．
+
+	- 三种基本的模式：file，buffers，MRU．file是找当前目录下的文件，buffers是找当前会话打开的其他文件，MRU是找过去打开过的文件．当按下Ctrl+R的时候，默认打开模式是file，可以通过`<c-f>`和`<c-b>`来切换模式．
+
+	- 可以对选中的文件通过分屏打开．`<c-t>`是创建新的tab，`<c-v>`和`<c-x>`是创建新的window．
+
+	- `<c-y>`用来创建一个新文件．
+
+	- `<c-z>`用于多选选中，`<c-o>`是在选中多个文件之后打开它们．
+
+	- 提交`..`可以在原先目录的基础上向上一个目录．
+
+	对于问题的第4条，在仔细研究之后，发现很多配置已经在CtrlP中默认实现了，所以绝大多数都没有写进我的`~/.vimrc`，除了最后一个忽略`.gitignore`中列出文件的：
+
+		  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+	`g:ctrlp_user_command`是一个CtrlP会用到的变量，它是一个list．在使用时，它的意思是：如果在当前目录或者更上层的目录中发现了`.git`，则在呈现搜索结果的时候，使用后面的那条命令．后面那条命令就是列出git文件夹中除了被排除的文件以外的其他文件．
