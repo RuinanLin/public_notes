@@ -35,3 +35,11 @@
 	"age": `25`
 }
 ````
+
+```json
+{
+	"firstName": "John",
+	"lastName": "Smith",
+	"age": 25
+}
+```
