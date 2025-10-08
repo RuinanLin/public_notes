@@ -70,3 +70,10 @@ Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 [A link to custom ID](#custom-id)
 
 [^2]: As you can see, github does not support custom IDs. IDs are auto-generated only. When you write `## My Section`, it will automatically generate an ID like `my-section`, and we can link to it using `[Go to section](#my-section)`
+
+First Term
+: This is the definition of the first item.
+
+Second Term
+: This is one definition of the second item.
+: This is another definition of the second item.
