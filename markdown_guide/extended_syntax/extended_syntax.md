@@ -98,4 +98,4 @@ I need to highlight these ==very important words==.[^4]
 
 I need to highlight these <mark>very important words</mark>.
 
-H~2~O
+H~2~O[^4]
