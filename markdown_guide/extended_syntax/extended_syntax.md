@@ -105,3 +105,7 @@ H<sub>2</sub>O
 X^2^[^4]
 
 X<sup>2</sup>
+
+http://www.example.com
+
+`http://www.example.com`
