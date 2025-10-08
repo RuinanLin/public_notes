@@ -19,3 +19,11 @@
 | :---              |    :----:   |          ---: |
 | Header            | Title       | Here's this   |
 | Para&#124;graph   | Text        | And more      |
+
+```
+{
+	"firstName": "John",
+	"lastName": "Smith",
+	"age": 25
+}
+```
