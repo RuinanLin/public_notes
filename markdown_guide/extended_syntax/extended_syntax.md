@@ -87,3 +87,7 @@ Second Term
 - [ ] Contact the media
 
 🫠
+
+Gone camping! :tent: Be back soon.
+
+That is so funny! :joy:
