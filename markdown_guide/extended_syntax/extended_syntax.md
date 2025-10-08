@@ -9,3 +9,8 @@
 | table | generated | by    | [Tables Generator][1] |
 
 [1]: <https://www.tablesgenerator.com/markdown_tables> "Tables Generator"
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
