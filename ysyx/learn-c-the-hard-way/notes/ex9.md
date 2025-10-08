@@ -43,4 +43,29 @@
 
 	至于为什么C语言这样设计，就要追溯C语言的发展历史了．<br><br>
 
-2. 对`names`执行上述的相反操作，把`names`当成`int`数组，并一次打印一个`int`，`Valgrind`会提示什么？
+* 对`names`执行上述的相反操作，把`names`当成`int`数组，并一次打印一个`int`，`Valgrind`会提示什么？
+
+	首先对`ex9.c`进行如下的修改：
+
+	```diff
+	25,28c25,28
+	< 	name[0] = 'Z';
+	< 	name[1] = 'e';
+	< 	name[2] = 'd';
+	< 	name[3] = '\0';
+	---
+	> 	name[0] = 1;
+	> 	name[1] = 2;
+	> 	name[2] = 3;
+	> 	name[3] = 4;
+	35c35
+	< 	printf("name each: %c %c %c %c\n",
+	---
+	> 	printf("name each: %d %d %d %d\n",
+	38,40d37
+	< 
+	< 	// print the name like a string
+	< 	printf("name: %s\n", name);
+	```
+
+	编译之后，编译器仍然没有警告，同时Valgrind也没有任何的警告或者报错．这是因为这些操作仍然是类型匹配的，更没有涉及到运行时的内存访问错误．
