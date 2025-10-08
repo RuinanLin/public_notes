@@ -79,3 +79,5 @@ Second Term
 : This is another definition of the second item.[^3]
 
 [^3]: As you can see, Github Flavored Markdown (GFM) does not support definition lists.
+
+~~The world is flat.~~ We now know that the world is round.
