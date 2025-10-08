@@ -108,4 +108,6 @@ X<sup>2</sup>
 
 http://www.example.com
 
-`http://www.example.com`
+`http://www.example.com`[^5]
+
+[^5]: Sadly, we cannot fully disable automatic URL linking in GitHub Flavored Markdown (GFM). We can only turn it into a piece of code.
