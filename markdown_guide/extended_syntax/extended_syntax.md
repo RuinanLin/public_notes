@@ -101,3 +101,7 @@ I need to highlight these <mark>very important words</mark>.
 H~2~O[^4]
 
 H<sub>2</sub>O
+
+X^2^
+
+X<sup>2</sup>
