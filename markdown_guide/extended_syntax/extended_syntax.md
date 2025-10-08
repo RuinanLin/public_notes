@@ -97,3 +97,5 @@ I need to highlight these ==very important words==.[^4]
 [^4]: Does not work in github 🙁
 
 I need to highlight these <mark>very important words</mark>.
+
+H~2~O
