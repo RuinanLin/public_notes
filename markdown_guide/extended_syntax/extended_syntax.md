@@ -81,3 +81,7 @@ Second Term
 [^3]: As you can see, Github Flavored Markdown (GFM) does not support definition lists.
 
 ~~The world is flat.~~ We now know that the world is round.
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
