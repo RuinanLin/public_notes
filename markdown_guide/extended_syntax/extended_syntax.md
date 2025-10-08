@@ -76,4 +76,6 @@ First Term
 
 Second Term
 : This is one definition of the second item.
-: This is another definition of the second item.
+: This is another definition of the second item.[^3]
+
+[^3]: As you can see, Github Flavored Markdown (GFM) does not support definition lists.
