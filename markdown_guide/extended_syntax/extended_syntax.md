@@ -14,3 +14,8 @@
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
+
+| Syntax            | Description | Test Text     |
+| :---              |    :----:   |          ---: |
+| Header            | Title       | Here's this   |
+| Para&#124;graph   | Text        | And more      |
