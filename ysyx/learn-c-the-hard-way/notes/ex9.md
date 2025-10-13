@@ -137,3 +137,14 @@
 	---
 	> 	name = "Zed";
 	```
+
+	结果如下：
+
+	```
+	numbers: 0 0 0 0
+	numbers: 1 2 3 4
+	name each: Z e d 
+	name: Zed
+	another: Zed
+	another each: Z e d 
+	```
