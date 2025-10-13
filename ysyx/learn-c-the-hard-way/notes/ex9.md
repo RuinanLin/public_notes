@@ -107,6 +107,7 @@
 	Turn it into hex: 0x64636261
 	Read out the written stuff: 3 2 1 0
 	```
+	<br><br>
 
 * 拿出一张纸，将每个数组画成一排方框，之后在纸上画出代码中的操作，看看是否正确．
 
