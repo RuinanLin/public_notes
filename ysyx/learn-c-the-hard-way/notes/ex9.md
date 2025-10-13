@@ -75,3 +75,37 @@
 	这个问题问得太模糊了，我只能按照我的不同的理解来解答．
 
 	首先，可以使用`for`等循环结构，对每个元素进行遍历，来打印；其次，对于字符打印，可以使用`putchar`，对于字符串打印，可以使用`puts`；还可以选择其他的占位符，例如`%x`，用其他的方式打印．<br><br>
+
+* 如果一个字符数组占四个字节，一个整数也占４个字节，你可以像整数一样使用整个`name`吗？你如何用黑魔法实现它？
+
+	可以通过指针的类型转换来实现．
+
+	```c
+	#include <stdio.h>
+
+	int main(int argc, char *argv[]) {
+		char name[4] = {'a', 'b', 'c', 'd'};
+		int* p = (int *)name;
+
+		// read
+		int read = *p;
+		printf("Read out as an int: %d\n", read);
+		printf("Turn it into hex: 0x%x\n", read);
+
+		// write
+		*p = 0x30313233;
+		printf("Read out the written stuff: %c %c %c %c\n", name[0], name[1], name[2], name[3]);
+
+		return 0;
+	}
+	```
+
+	运行结果如下所示：
+
+	```
+	Read out as an int: 1684234849
+	Turn it into hex: 0x64636261
+	Read out the written stuff: 3 2 1 0
+	```
+
+	<br><br>
