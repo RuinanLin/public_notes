@@ -114,3 +114,27 @@
 
 	略．<br><br>
 
+* 将`name`转换成`another`的形式，看看代码是否能正常工作．
+
+	当然能，改动如下：
+
+	```diff
+	5c5
+	< 	char name[4] = {'a'};
+	---
+	> 	char *name;
+	12,17d11
+	< 	printf("name each: %c %c %c %c\n",
+	< 					name[0], name[1],
+	< 					name[2], name[3]);
+	< 
+	< 	printf("name: %s\n", name);
+	< 
+	25,28c19
+	< 	name[0] = 'Z';
+	< 	name[1] = 'e';
+	< 	name[2] = 'd';
+	< 	name[3] = '\0';
+	---
+	> 	name = "Zed";
+	```
