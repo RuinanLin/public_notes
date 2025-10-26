@@ -126,4 +126,20 @@
 
 		  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-	`g:ctrlp_user_command`是一个CtrlP会用到的变量，它是一个list．在使用时，它的意思是：如果在当前目录或者更上层的目录中发现了`.git`，则在呈现搜索结果的时候，使用后面的那条命令．后面那条命令就是列出git文件夹中除了被排除的文件以外的其他文件．
+	`g:ctrlp_user_command`是一个CtrlP会用到的变量，它是一个list．在使用时，它的意思是：如果在当前目录或者更上层的目录中发现了`.git`，则在呈现搜索结果的时候，使用后面的那条命令．后面那条命令就是列出git文件夹中除了被排除的文件以外的其他文件．<br><br>
+
+4. To practice using Vim, re-do the [Demo](https://missing.csail.mit.edu/2020/editors/#demo) from lecture on your own machine.
+
+	略．<br><br>
+
+5. Use Vim for *all* your text editing for the next month. Whenevere something seems inefficient, or when you think "there must be a better way", try Googling it, there probably is. If you get stuck, come to office hours or send us an email.
+
+	略．<br><br>
+
+6. Configure your other tools to use Vim bindings (see instructions above).
+
+	尝试使用Chrome浏览器的Vim emulation工具Vimium，发现真的能够极大地提高使用Chrome浏览器的效率．
+
+	尤其是`f/F`，`j`，`k`，`J`，`K`，`T`，`H`，`L`，`m`等一系列操作，真的是极大地简化了浏览器使用时非常常见的一些操作．
+
+	还有就是记住`?`相当于help，可以经常打开来看看．<br><br>
