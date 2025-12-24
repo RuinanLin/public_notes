@@ -138,8 +138,57 @@
 
 6. Configure your other tools to use Vim bindings (see instructions above).
 
-	尝试使用Chrome浏览器的Vim emulation工具Vimium，发现真的能够极大地提高使用Chrome浏览器的效率．
+	尝试使用Chrome浏览器的Vim emulation工具[Vimium](https://vimium.github.io/)，发现真的能够极大地提高使用Chrome浏览器的效率．
 
 	尤其是`f/F`，`j`，`k`，`J`，`K`，`T`，`H`，`L`，`m`等一系列操作，真的是极大地简化了浏览器使用时非常常见的一些操作．
 
 	还有就是记住`?`相当于help，可以经常打开来看看．<br><br>
+
+7. Further customize your `~/.vimrc` and install more plugins.
+
+	`~/.vimrc`就不说了，已经用得很熟了，也和ysyx里面提供的那个版本融合过了，接下来重点探索一下课件上提到的其他插件．
+
+	1. 首先来看[vim-easymotion](https://github.com/easymotion/vim-easymotion)。
+	
+		它能让你仅通过敲击键盘上的1~2个键来实现光标的快速移动。
+		
+		如果你在使用vim的时候不使用vim-easymotion这种插件，那么，当你需要移动光标的时候，你就需要使用`<number>w`或者`<number>f{char}`等命令。即使你使用`set relativenumber`显示了相对行号，你也要在移动的时候用余光看一下相对行号，还要自己键入，还是很麻烦。
+
+		首先总结在不使用自行配置的前提下使用vim-easymotion的方法。使用vim-easymotion，你需要首先键入`<Leader><Leader>`来触发它。紧接着，你需要键入一个动作，例如`w`（以单词为单位移动）或者`fe`（移动到下一个`e`字符处）等。这时，vim-easymotion会将所有符合条件的地方用一个或两个字符标识，只要再键入对应的标识，就可以把光标移动到对应的位置。
+
+		以下是一些频繁配合使用的动作：
+
+		- `w/b`，分别是以单词为单位向后或向前；
+		- `f<char>/F<char>/s<char>`，分别是找到后续的`<char>`、前面的`<char>`以及全局u的`<char>`；
+		- `j/k`，行跳转，向下或向上；
+		
+		在以上总结中，可以看到默认情况下的使用有一些问题：
+
+		- `<Leader>`需要键入两遍，这是完全没有必要的；
+		- 默认条件下的`<Leader>`是`'\'`，它在键盘上很远的位置；
+		- 不能在多个窗口之间跳转；
+		- 大小写敏感，事实上大多数情况下，无论大小写都列出来是更加方便的。
+
+		因此，可以在`~/.vimrc`中进行配置：
+
+			" Set vim-easymotion's <Leader> as a space, which has not been mapped and is easy to reach on a keyboard.
+			let mapleader = " "
+
+			" Disable default mappings
+			let g:EasyMotion_do_mapping = 0
+
+			" Manually map the motions in order to enable one <Leader> and overwin motions
+			nmap <Leader>w <Plug>(easymotion-overwin-w)
+			nmap <Leader>e <Plug>(easymotion-e)
+			nmap <Leader>b <Plug>(easymotion-b)
+
+			nmap <Leader>j <Plug>(easymotion-j)
+			nmap <Leader>k <Plug>(easymotion-k)
+			nmap <Leader>l <Plug>(easymotion-lineforward)
+			nmap <Leader>h <Plug>(easymotion-linebackward)
+
+			" This one is really useful, which can jump to any character
+			" But it seems that we cannot map it to <Leader>s, because in Normal mode, s
+			" means delete the current character and enter Insert mode
+			" So we map it to <Leader>;
+			nmap <Leader>; <Plug>(easymotion-s)
