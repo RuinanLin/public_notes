@@ -194,3 +194,10 @@
 			nmap <Leader>h <Plug>(easymotion-linebackward)
 
 			nmap <Leader>f <Plug>(easymotion-overwin-f)
+		
+		这样就解决了上述提到的问题：
+
+		- <Leader>只用键入一遍；
+		- <Leader>改为空格，它很容易触及，并且原来它的映射并不会使用到；
+		- <Leader>w和<Leader>f开启了overwin的功能，不仅支持单个窗口中的双向跳转，还支持跨窗口跳转；
+		- 开启了smartcase功能，智能匹配大小写。
