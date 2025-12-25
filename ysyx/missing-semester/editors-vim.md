@@ -171,11 +171,17 @@
 
 		因此，可以在`~/.vimrc`中进行配置：
 
-			" Set vim-easymotion's <Leader> as a space, which has not been mapped and is easy to reach on a keyboard.
+			" --------------- vim-easymotion ---------------
+
+			" Set vim-easymotion's <Leader> as a space, which has not been mapped and is
+			" easy to reach on a keyboard.
 			let mapleader = " "
 
 			" Disable default mappings
 			let g:EasyMotion_do_mapping = 0
+
+			" Turn on case-insensitive feature
+			let g:EasyMotion_smartcase = 1
 
 			" Manually map the motions in order to enable one <Leader> and overwin motions
 			nmap <Leader>w <Plug>(easymotion-overwin-w)
@@ -187,8 +193,4 @@
 			nmap <Leader>l <Plug>(easymotion-lineforward)
 			nmap <Leader>h <Plug>(easymotion-linebackward)
 
-			" This one is really useful, which can jump to any character
-			" But it seems that we cannot map it to <Leader>s, because in Normal mode, s
-			" means delete the current character and enter Insert mode
-			" So we map it to <Leader>;
-			nmap <Leader>; <Plug>(easymotion-s)
+			nmap <Leader>f <Plug>(easymotion-overwin-f)
