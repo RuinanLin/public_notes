@@ -201,3 +201,28 @@
 		- <Leader>改为空格，它很容易触及，并且原来它的映射并不会使用到；
 		- <Leader>w和<Leader>f开启了overwin的功能，不仅支持单个窗口中的双向跳转，还支持跨窗口跳转；
 		- 开启了smartcase功能，智能匹配大小写。
+	
+	2. 再来看[NERDTree](https://github.com/preservim/nerdtree)。
+
+		NERDTree能够让你在Vim中打开文件系统的目录，从而更加清晰方便地在Vim中打开文件或进行一些文件操作。
+
+		使用默认操作打开NERDTree时，打开的文件目录是当前Vim所在的目录（Vim也会维护自己的目录）。在这个呈现目录的新窗口中，最基础的命令是`?`键，按下`?`键会弹出使用说明，再按一遍这个使用说明就会回去。
+
+		其他常用的操作列举如下：
+
+		- `o`：对文件，在之前的窗口中打开；对目录，展开或收起；
+		- `O`：递归打开目录；
+		- `t`：在新的tab中打开文件或展开目录，并跳转到新tab；
+		- `T`：在新的tab中打开文件或展开目录，并保持在当前tab不跳转；
+		- `i`：在水平新窗口打开文件；
+		- `s`：在垂直新窗口打开文件；
+		- `x`：收起所在的目录；
+		- `I`：显示隐藏文件或目录；
+		- `q`：关闭NERDTree。
+
+		默认情况下，需要用`:NERDTree`或者`:NERDTreeToggle`来打开，但是我们可以在`~/.vimrc`中创建快捷映射：
+
+			" Toggle NERDTree on/off in Normal Mode
+			nnoremap <C-n> :NERDTreeToggle<CR>
+		
+		这样可以使用Ctrl+N来打开NERDTree。
