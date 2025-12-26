@@ -201,6 +201,8 @@
 		- <Leader>改为空格，它很容易触及，并且原来它的映射并不会使用到；
 		- <Leader>w和<Leader>f开启了overwin的功能，不仅支持单个窗口中的双向跳转，还支持跨窗口跳转；
 		- 开启了smartcase功能，智能匹配大小写。
+
+		在安装上，我把vim-easymotion的GitHub仓库直接克隆在了`~/.vim/pack/plugins/start/`下，`~/.vim/pack/plugins/start/vim-easymotion`。
 	
 	2. 再来看[NERDTree](https://github.com/preservim/nerdtree)。
 
@@ -226,3 +228,5 @@
 			nnoremap <C-n> :NERDTreeToggle<CR>
 		
 		这样可以使用Ctrl+N来打开NERDTree。
+
+		在安装上，我把NERDTree的GitHub仓库直接克隆在了`~/.vim/pack/plugins/start/`下，`~/.vim/pack/plugins/start/nerdtree`。
