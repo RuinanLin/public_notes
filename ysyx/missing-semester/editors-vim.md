@@ -225,9 +225,9 @@
 		默认情况下，需要用`:NERDTree`或者`:NERDTreeToggle`来打开，但是我们可以在`~/.vimrc`中创建快捷映射：
 
 			" Toggle NERDTree on/off in Normal Mode
-			nnoremap <C-n> :NERDTreeToggle<CR>
+			nnoremap <F7> :NERDTreeToggle<CR>
 		
-		这样可以使用Ctrl+N来打开NERDTree。
+		这样可以使用F7来打开NERDTree。
 
 		在安装上，我把NERDTree的GitHub仓库直接克隆在了`~/.vim/pack/plugins/start/`下，`~/.vim/pack/plugins/start/nerdtree`。
 	
