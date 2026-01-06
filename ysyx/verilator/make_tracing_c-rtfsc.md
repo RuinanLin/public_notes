@@ -321,13 +321,26 @@ contextp->randReset(2);
     --exe               Link to create executable
     ```
 
-2. **`VERILATOR_FLAGS += -MMD`**
+2. **`VERILATOR_FLAGS += --build -j`**
+
+    ```
+    --build             Build model executable/library after Verilation
+    -j <jobs>           Parallelism for --build-jobs/--verilate-jobs
+    ```
+
+    这里有个不太直观容易误解的点：`--exe`和`--build`的区别在哪里？为什么二者缺一不可？
+
+    `--exe`的作用是在生成的C++代码中，包含支持可执行文件运行的必要代码。它会指示Verilator在`Mdir`目录下生成一个特定的Makefile（通常叫`Vtop.mk`）。这个Makefile包含了如何编译生成的C++代码以及如何链接你的`sim_main.cpp`的所有规则。
+
+    `--build`的作用是执行编译动作，告诉Verilator：“在把Verilog转换成C++之后，请立刻帮我调用C++编译器（如GCC或Clang）。”
+
+3. **`VERILATOR_FLAGS += -MMD`**
 
     ```
     --MMD               Create .d dependency files
     ```
 
-3. **`VERILATOR_FLAGS += -x-assign fast`**
+4. **`VERILATOR_FLAGS += -x-assign fast`**
 
     ```
     --x-assign <mode>   Assign non-initial Xs to this value
@@ -335,17 +348,17 @@ contextp->randReset(2);
 
     其中，`fast`的含义是，把X赋值成对性能影响最好的值（"converts all Xs to whatever is best for performance"）。
 
-4. **`VERILATOR_FLAGS += -Wall`**
+5. **`VERILATOR_FLAGS += -Wall`**
 
     ```
     -Wall               Enable all style warnings
     ```
 
-5. **`VERILATOR_FLAGS += --trace`, `VERILATOR_FLAGS += --assert`, `VERILATOR_FLAGS += --coverage`, `VERILATOR_FLAGS += --debug`**
+6. **`VERILATOR_FLAGS += --trace`, `VERILATOR_FLAGS += --assert`, `VERILATOR_FLAGS += --coverage`, `VERILATOR_FLAGS += --debug`**
 
     这些前文几乎都提到了。
 
-6. **`VERILATOR_FLAGS += --gdbbt`**
+7. **`VERILATOR_FLAGS += --gdbbt`**
 
     ```
     --gdbbt             Run Verilator under GDB for backtrace
