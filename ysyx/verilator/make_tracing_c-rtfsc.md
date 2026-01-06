@@ -310,4 +310,47 @@ contextp->randReset(2);
 
     那么仿真器会忽略代码里的`2`，改用模式`0`。
 
-### 
+### `Makefile`中的编译选项
+
+编译选项可以通过`man verilator`命令来查看。在Verilator中，`-`和`--`是互通的，只是为了满足不同用户的习惯。
+
+1. **`VERILATOR_FLAGS += -cc --exe`**
+
+    ```
+    --cc                Create C++ output
+    --exe               Link to create executable
+    ```
+
+2. **`VERILATOR_FLAGS += -MMD`**
+
+    ```
+    --MMD               Create .d dependency files
+    ```
+
+3. **`VERILATOR_FLAGS += -x-assign fast`**
+
+    ```
+    --x-assign <mode>   Assign non-initial Xs to this value
+    ```
+
+    其中，`fast`的含义是，把X赋值成对性能影响最好的值（"converts all Xs to whatever is best for performance"）。
+
+4. **`VERILATOR_FLAGS += -Wall`**
+
+    ```
+    -Wall               Enable all style warnings
+    ```
+
+5. **`VERILATOR_FLAGS += --trace`, `VERILATOR_FLAGS += --assert`, `VERILATOR_FLAGS += --coverage`, `VERILATOR_FLAGS += --debug`**
+
+    这些前文几乎都提到了。
+
+6. **`VERILATOR_FLAGS += --gdbbt`**
+
+    ```
+    --gdbbt             Run Verilator under GDB for backtrace
+    ```
+
+    它的主要作用是：当Verilator软件本身崩溃（发生Segfault或内部错误）时，自动调用调试器GDB并打印出函数调用栈（Backtrace），然后立即退出。
+
+    简单来说，它不是用来调试你的Verilog代码的，而是用来调试Verilator这个工具本身的。
