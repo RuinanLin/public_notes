@@ -67,14 +67,14 @@ def contiguous_partition(elements, k):
     num_not_empty_buckets = min(k, n)
 
     # Calculate the minimum size of each bucket
-    base_size = n // num_not_emtpy_buckets
+    base_size = n // num_not_empty_buckets
     # Calculate how many buckets need one extra element
-    extras = n % num_not_emtpy_buckets
+    extras = n % num_not_empty_buckets
 
     buckets = []
     current_idx = 0
 
-    for i in range(num_not_emtpy_buckets):
+    for i in range(num_not_empty_buckets):
         # Determine the size of current bucket
         bucket_size = base_size + (1 if i < extras else 0)
         # Add elements to the current bucket
@@ -151,14 +151,14 @@ def contiguous_partition(elements: list[object], k: int) -> list[list[object]]:
     num_not_empty_buckets = min(k, n)
 
     # Calculate the minimum size of each bucket
-    base_size = n // num_not_emtpy_buckets
+    base_size = n // num_not_empty_buckets
     # Calculate how many buckets need one extra element
-    extras = n % num_not_emtpy_buckets
+    extras = n % num_not_empty_buckets
 
     buckets = []
     current_idx = 0
 
-    for i in range(num_not_emtpy_buckets):
+    for i in range(num_not_empty_buckets):
         # Determine the size of current bucket
         bucket_size = base_size + (1 if i < extras else 0)
         # Add elements to the current bucket
